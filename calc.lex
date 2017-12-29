@@ -1,5 +1,3 @@
-/* MOF file parser */
-
 %option noyywrap
 
 %{
