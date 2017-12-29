@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 3.0)
-include($ENV{SRCROOT}/master.cmake)
+add_definitions(-DUNICODE -D_UNICODE)
+add_definitions(/std:c++latest)
+
 include_directories(.)
 
 project(win-flex-bison-sample)
@@ -12,7 +14,7 @@ find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
 
 BISON_TARGET(CalcParser calc.y ${CMAKE_CURRENT_BINARY_DIR}/bison.cpp)
-FLEX_TARGET(CalcScanner calc.lex ${CMAKE_CURRENT_BINARY_DIR}/lex.cpp)
+FLEX_TARGET(CalcScanner calc.lex ${CMAKE_CURRENT_BINARY_DIR}/lex.cpp COMPILE_FLAGS --wincompat)
 ADD_FLEX_BISON_DEPENDENCY(CalcScanner CalcParser)
 
 add_executable(win-flex-bison-sample
@@ -21,5 +23,4 @@ add_executable(win-flex-bison-sample
     ${FLEX_CalcScanner_OUTPUTS}
 )
 target_link_libraries(win-flex-bison-sample
-    ${FLEX_LIBRARIES}
 )

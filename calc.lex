@@ -1,10 +1,11 @@
 /* MOF file parser */
 
+%option noyywrap
+
 %{
     #include "heading.h"
     #include "bison.hpp"
     int yyerror(char *s);
-    int yylineno = 1;
 %}
 
 digit [0-9]

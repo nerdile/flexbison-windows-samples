@@ -1,2 +1,2 @@
-set CMAKE_PREFIX_PATH=D:\gnu\bison
-set PATH=%PATH%;D:\gnu\bison\bin
+set CMAKE_PREFIX_PATH=%~dp0..\..\ext\winflexbison
+set PATH=%PATH%;%~dp0..\..\ext\winflexbison
