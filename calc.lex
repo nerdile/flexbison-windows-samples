@@ -1,5 +1,3 @@
-/* MOF file parser */
-
 %{
     #include "heading.h"
     #include "bison.hpp"
