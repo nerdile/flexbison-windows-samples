@@ -2,11 +2,11 @@
 
 This is an example of using Flex/Bison to write a parser in C++ on Windows.
 
-## Release 0
-A first (non-working) example of writing a parser, using flex and bison from gnuwin32.
+## Release 1
+A first working example of writing a parser, using flex and bison from winflexbison.
 
 ### Requirements:
-- Saintonge-build for building
+- CMake for building
 - gnuwin32 flex and bison both installed into D:\gnu\bison, or update CMAKE_PREFIX_PATH in setenv.bat
 
 ### Issues:
